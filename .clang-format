@@ -1,6 +1,25 @@
 ---
 Language: Cpp
-BasedOnStyle: LLVM
+BasedOnStyle: Google
+
+AlignAfterOpenBracket: Align
+
 IndentWidth: 4
 AccessModifierOffset: -4
+ContinuationIndentWidth: 8
+
+PointerAlignment: Right
+
+AllowShortFunctionsOnASingleLine: Inline
+
+BinPackArguments: false
+BinPackParameters: false
+AllowAllParametersOfDeclarationOnNextLine: false
+
+AlwaysBreakTemplateDeclarations: Yes
+
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+BreakConstructorInitializers: BeforeComma
+
+SpacesBeforeTrailingComments: 1
 ...
