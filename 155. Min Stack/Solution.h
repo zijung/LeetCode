@@ -5,7 +5,9 @@ using std::deque;
 class MinStack {
 public:
     /** initialize your data structure here. */
-    MinStack() : d(), min() {}
+    MinStack()
+        : d()
+        , min() {}
 
     void push(int x) {
         d.push_back(x);

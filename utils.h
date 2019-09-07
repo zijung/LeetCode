@@ -13,6 +13,8 @@ void trimLeftTrailingSpaces(string &input);
 
 void trimRightTrailingSpaces(string &input);
 
+int stringToInteger(const string &input);
+
 vector<int> stringToIntegerVector(string input);
 
 ListNode *stringToListNode(const string &input);
@@ -20,8 +22,6 @@ ListNode *stringToListNode(const string &input);
 string stringToString(const string &input);
 
 string boolToString(bool input);
-
-int stringToInteger(const string &input);
 
 string listNodeToString(const ListNode *node);
 

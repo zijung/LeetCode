@@ -1,7 +1,11 @@
 #include "utils.h"
 
+#include <algorithm>
 #include <sstream>
 
+#include <cassert>
+
+using std::find_if;
 using std::stringstream;
 using std::to_string;
 using std::vector;
@@ -18,6 +22,10 @@ void trimRightTrailingSpaces(string &input) {
                         [](int ch) { return !isspace(ch); })
                         .base(),
                 input.end());
+}
+
+int stringToInteger(const string &input) {
+    return stoi(input);
 }
 
 vector<int> stringToIntegerVector(string input) {
@@ -59,47 +67,44 @@ string stringToString(const string &input) {
         if (input[i] == '\\') {
             char nextChar = input[i + 1];
             switch (nextChar) {
-                case '\"':
-                    result.push_back('\"');
-                    break;
-                case '/':
-                    result.push_back('/');
-                    break;
-                case '\\':
-                    result.push_back('\\');
-                    break;
-                case 'b':
-                    result.push_back('\b');
-                    break;
-                case 'f':
-                    result.push_back('\f');
-                    break;
-                case 'r':
-                    result.push_back('\r');
-                    break;
-                case 'n':
-                    result.push_back('\n');
-                    break;
-                case 't':
-                    result.push_back('\t');
-                    break;
-                default:
-                    break;
+            case '\"':
+                result.push_back('\"');
+                break;
+            case '/':
+                result.push_back('/');
+                break;
+            case '\\':
+                result.push_back('\\');
+                break;
+            case 'b':
+                result.push_back('\b');
+                break;
+            case 'f':
+                result.push_back('\f');
+                break;
+            case 'r':
+                result.push_back('\r');
+                break;
+            case 'n':
+                result.push_back('\n');
+                break;
+            case 't':
+                result.push_back('\t');
+                break;
+            default:
+                break;
             }
             i++;
         } else {
             result.push_back(currentChar);
         }
     }
+
     return result;
 }
 
 string boolToString(bool input) {
     return input ? "True" : "False";
-}
-
-int stringToInteger(const string &input) {
-    return stoi(input);
 }
 
 string listNodeToString(const ListNode *node) {

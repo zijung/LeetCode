@@ -11,35 +11,35 @@ public:
 
         for (char &i : s) {
             switch (i) {
-                case '(':
-                case '[':
-                case '{':
-                    stk.push(i);
-                    break;
+            case '(':
+            case '[':
+            case '{':
+                stk.push(i);
+                break;
 
-                case ')':
-                    if (stk.empty() || stk.top() != '(') {
-                        return false;
-                    }
+            case ')':
+                if (stk.empty() || stk.top() != '(') {
+                    return false;
+                }
 
-                    stk.pop();
-                    break;
-                case ']':
-                    if (stk.empty() || stk.top() != '[') {
-                        return false;
-                    }
+                stk.pop();
+                break;
+            case ']':
+                if (stk.empty() || stk.top() != '[') {
+                    return false;
+                }
 
-                    stk.pop();
-                    break;
-                case '}':
-                    if (stk.empty() || stk.top() != '{') {
-                        return false;
-                    }
+                stk.pop();
+                break;
+            case '}':
+                if (stk.empty() || stk.top() != '{') {
+                    return false;
+                }
 
-                    stk.pop();
-                    break;
-                default:
-                    break;
+                stk.pop();
+                break;
+            default:
+                break;
             }
         }
 
