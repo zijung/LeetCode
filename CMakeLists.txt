@@ -3,6 +3,7 @@ project(LeetCode)
 
 set(CMAKE_CXX_STANDARD 17)
 
+add_subdirectory("1. Two Sum")
 add_subdirectory("19. Remove Nth Node From End of List")
 add_subdirectory("20. Valid Parentheses")
 add_subdirectory("21. Merge Two Sorted Lists")
