@@ -18,8 +18,10 @@ std::string stringToString(const std::string &input);
 
 std::string boolToString(bool input);
 
-std::string integerVectorToString(const std::vector<int> &list, int length = -1);
+std::string integerVectorToString(const std::vector<int> &list,
+                                  int length = -1);
 
-std::string twoDimensionalIntegerVectorToString(const std::vector<std::vector<int>> &list);
+std::string
+twoDimensionalIntegerVectorToString(const std::vector<std::vector<int>> &list);
 
 #endif // !LEETCODE_UTILS_UTILS_H
