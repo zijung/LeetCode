@@ -1,7 +1,12 @@
 #include "ListNode.h"
 
+#include <vector>
+#include <string>
+
 #include "utils.h"
 
+using std::vector;
+using std::string;
 using std::to_string;
 
 ListNode *stringToListNode(const std::string &input) {

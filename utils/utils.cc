@@ -8,15 +8,16 @@
 using std::find_if;
 using std::stringstream;
 using std::vector;
+using std::string;
 using std::to_string;
 
-void trimLeftTrailingSpaces(string &input) {
+void trimLeftTrailingSpaces(std::string &input) {
     input.erase(input.begin(), find_if(input.begin(), input.end(), [](int ch) {
                     return !isspace(ch);
                 }));
 }
 
-void trimRightTrailingSpaces(string &input) {
+void trimRightTrailingSpaces(std::string &input) {
     input.erase(find_if(input.rbegin(),
                         input.rend(),
                         [](int ch) { return !isspace(ch); })
@@ -24,11 +25,11 @@ void trimRightTrailingSpaces(string &input) {
                 input.end());
 }
 
-int stringToInteger(const string &input) {
+int stringToInteger(const std::string &input) {
     return stoi(input);
 }
 
-vector<int> stringToIntegerVector(string input) {
+std::vector<int> stringToIntegerVector(std::string input) {
     vector<int> output;
     trimLeftTrailingSpaces(input);
     trimRightTrailingSpaces(input);
@@ -43,7 +44,7 @@ vector<int> stringToIntegerVector(string input) {
     return output;
 }
 
-string stringToString(const string &input) {
+std::string stringToString(const std::string &input) {
     assert(input.length() >= 2);
     string result;
     for (int i = 1; i < input.length() - 1; i++) {
@@ -87,11 +88,11 @@ string stringToString(const string &input) {
     return result;
 }
 
-string boolToString(bool input) {
+std::string boolToString(bool input) {
     return input ? "True" : "False";
 }
 
-string integerVectorToString(const vector<int> &list, int length) {
+std::string integerVectorToString(const std::vector<int> &list, int length) {
     if (length == -1) {
         length = list.size();
     }
@@ -109,7 +110,7 @@ string integerVectorToString(const vector<int> &list, int length) {
     return "[" + result.substr(0, result.length() - 2) + "]";
 }
 
-string twoDimensionalIntegerVectorToString(const vector<vector<int>> &list) {
+std::string twoDimensionalIntegerVectorToString(const std::vector<std::vector<int>> &list) {
     string result("[");
     for (auto &i : list) {
         result.append(integerVectorToString(i));

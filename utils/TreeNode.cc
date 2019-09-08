@@ -5,10 +5,11 @@
 
 #include "utils.h"
 
+using std::string;
 using std::stringstream;
 using std::queue;
 
-TreeNode *stringToTreeNode(string input) {
+TreeNode *stringToTreeNode(std::string input) {
     trimLeftTrailingSpaces(input);
     trimRightTrailingSpaces(input);
     input = input.substr(1, input.length() - 2);

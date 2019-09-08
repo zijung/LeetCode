@@ -6,23 +6,20 @@
 
 #include "ListNode.h"
 
-using std::string;
-using std::vector;
+void trimLeftTrailingSpaces(std::string &input);
 
-void trimLeftTrailingSpaces(string &input);
+void trimRightTrailingSpaces(std::string &input);
 
-void trimRightTrailingSpaces(string &input);
+int stringToInteger(const std::string &input);
 
-int stringToInteger(const string &input);
+std::vector<int> stringToIntegerVector(std::string input);
 
-vector<int> stringToIntegerVector(string input);
+std::string stringToString(const std::string &input);
 
-string stringToString(const string &input);
+std::string boolToString(bool input);
 
-string boolToString(bool input);
+std::string integerVectorToString(const std::vector<int> &list, int length = -1);
 
-string integerVectorToString(const vector<int> &list, int length = -1);
-
-string twoDimensionalIntegerVectorToString(const vector<vector<int>> &list);
+std::string twoDimensionalIntegerVectorToString(const std::vector<std::vector<int>> &list);
 
 #endif // !LEETCODE_UTILS_UTILS_H
