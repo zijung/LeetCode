@@ -21,4 +21,8 @@ string stringToString(const string &input);
 
 string boolToString(bool input);
 
+string integerVectorToString(const vector<int> &list, int length = -1);
+
+string twoDimensionalIntegerVectorToString(const vector<vector<int>> &list);
+
 #endif // !LEETCODE_UTILS_UTILS_H

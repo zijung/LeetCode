@@ -8,6 +8,7 @@
 using std::find_if;
 using std::stringstream;
 using std::vector;
+using std::to_string;
 
 void trimLeftTrailingSpaces(string &input) {
     input.erase(input.begin(), find_if(input.begin(), input.end(), [](int ch) {
@@ -88,4 +89,34 @@ string stringToString(const string &input) {
 
 string boolToString(bool input) {
     return input ? "True" : "False";
+}
+
+string integerVectorToString(const vector<int> &list, int length) {
+    if (length == -1) {
+        length = list.size();
+    }
+
+    if (length == 0) {
+        return "[]";
+    }
+
+    string result;
+    for(int index = 0; index < length; index++) {
+        int number = list[index];
+        result += to_string(number) + ", ";
+    }
+
+    return "[" + result.substr(0, result.length() - 2) + "]";
+}
+
+string twoDimensionalIntegerVectorToString(const vector<vector<int>> &list) {
+    string result("[");
+    for (auto &i : list) {
+        result.append(integerVectorToString(i));
+        result.append(", ");
+    }
+    result.resize(result.size() - 1);
+    result.back() = ']';
+
+    return result;
 }
