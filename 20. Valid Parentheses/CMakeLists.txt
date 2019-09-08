@@ -1,5 +1,6 @@
-set(PROPLEM_NAME 20)
+set(SQUENCE 20)
 
-add_executable(${PROPLEM_NAME} main.cc Solution.h)
-
-target_link_libraries(${PROPLEM_NAME} PUBLIC utils)
+add_executable(${PROJECT_NAME}_${SQUENCE}
+    main.cc Solution.h
+    ${PROJECT_SOURCE_DIR}/utils/utils.cc
+)

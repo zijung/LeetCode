@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 
-#include <utils.h>
+#include "../utils/utils.h"
 
 #include "Solution.h"
 

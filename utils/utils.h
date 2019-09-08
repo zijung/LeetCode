@@ -1,10 +1,10 @@
-#ifndef LEETCODE_UTILS_H
-#define LEETCODE_UTILS_H
+#ifndef LEETCODE_UTILS_UTILS_H
+#define LEETCODE_UTILS_UTILS_H
 
 #include <string>
 #include <vector>
 
-#include <ListNode.h>
+#include "ListNode.h"
 
 using std::string;
 using std::vector;
@@ -17,12 +17,8 @@ int stringToInteger(const string &input);
 
 vector<int> stringToIntegerVector(string input);
 
-ListNode *stringToListNode(const string &input);
-
 string stringToString(const string &input);
 
 string boolToString(bool input);
 
-string listNodeToString(const ListNode *node);
-
-#endif // !LEETCODE_UTILS_H
+#endif // !LEETCODE_UTILS_UTILS_H

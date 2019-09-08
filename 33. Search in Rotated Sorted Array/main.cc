@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include <utils.h>
+#include "../utils/utils.h"
 
 #include "Solution.h"
 

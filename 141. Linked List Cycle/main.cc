@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 
-#include <ListNode.h>
-#include <utils.h>
+#include "../utils/utils.h"
+#include "../utils/ListNode.h"
 
 #include "Solution.h"
 
